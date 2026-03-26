@@ -1,0 +1,43 @@
+# BaksDev 4tochki
+
+[![Version](https://img.shields.io/badge/version-7.4.0-blue)](https://github.com/baks-dev/four-tochki-orders/releases)
+![php 8.4+](https://img.shields.io/badge/php-min%208.4-red.svg)
+[![packagist](https://img.shields.io/badge/packagist-green)](https://packagist.org/packages/baks-dev/four-tochki-orders)
+
+Модуль продукции 4tochki
+
+## Установка
+
+``` bash
+$ composer require baks-dev/four-tochki-orders
+```
+
+## Дополнительно
+
+Список идентификаторов складов партнера:
+
+https://b2b.4tochki.ru/Account/AvailableWarehouses
+
+Установка конфигурации и файловых ресурсов:
+
+``` bash
+$ php bin/console baks:assets:install
+```
+
+Изменения в схеме базы данных с помощью миграции
+
+``` bash
+$ php bin/console doctrine:migrations:diff
+$ php bin/console doctrine:migrations:migrate
+```
+
+## Тестирование
+
+``` bash
+$ php bin/phpunit --group=four-tochki-orders
+```
+
+## Лицензия ![License](https://img.shields.io/badge/MIT-green)
+
+The MIT License (MIT). Обратитесь к [Файлу лицензии](LICENSE.md) за дополнительной информацией.
+
