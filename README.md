@@ -4,19 +4,13 @@
 ![php 8.4+](https://img.shields.io/badge/php-min%208.4-red.svg)
 [![packagist](https://img.shields.io/badge/packagist-green)](https://packagist.org/packages/baks-dev/four-tochki-orders)
 
-Модуль продукции 4tochki
+Модуль заказов 4tochki
 
 ## Установка
 
 ``` bash
 $ composer require baks-dev/four-tochki-orders
 ```
-
-## Дополнительно
-
-Список идентификаторов складов партнера:
-
-https://b2b.4tochki.ru/Account/AvailableWarehouses
 
 Установка конфигурации и файловых ресурсов:
 
