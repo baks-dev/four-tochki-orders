@@ -69,14 +69,13 @@ final class FourTochkiCreateOrderRequest extends FourTochkiApi
      * логистике), на котором есть данный товар.
      *
      * BaseOrder
-     * orderNumber	string	Номер заказа в вашей системе.
+     * orderNumber    string    Номер заказа в вашей системе.
      */
     public function createOrder(string $code, int $quantity): false|int
     {
-        /** В тестовой среде создаем только тестовые заказы */
         if(false === $this->isExecuteEnvironment())
         {
-            $this->test = true;
+            return false;
         }
 
         if(false === $this->getWarehouse())
@@ -94,7 +93,7 @@ final class FourTochkiCreateOrderRequest extends FourTochkiApi
             options: ['order' => [
                 'base_order' => ['orderNumber' => $this->orderNumber],
                 'product_list' => [['code' => $code, 'quantity' => $quantity, 'wrh' => $this->getWarehouse()]],
-                'is_test' => $this->test
+                'is_test' => $this->test,
             ]],
         );
 
