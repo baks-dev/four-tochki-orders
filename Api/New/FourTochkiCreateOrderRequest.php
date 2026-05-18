@@ -73,9 +73,10 @@ final class FourTochkiCreateOrderRequest extends FourTochkiApi
      */
     public function createOrder(string $code, int $quantity): false|int
     {
+        /** В тестовой среде создаем только тестовые заказы */
         if(false === $this->isExecuteEnvironment())
         {
-            return false;
+            $this->test = true;
         }
 
         if(false === $this->getWarehouse())

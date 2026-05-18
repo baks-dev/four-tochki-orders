@@ -176,6 +176,7 @@ final readonly class FourTochkiCreateOrderDispatcher
                 ->offerConst($CurrentProductIdentifier->getOfferConst())
                 ->variationConst($CurrentProductIdentifier->getVariationConst())
                 ->modificationConst($CurrentProductIdentifier->getModificationConst())
+                ->forProfile($OrderEvent->getOrderProfile())
                 ->find();
 
             if(false === ($FourTochkiProductProfileResult instanceof FourTochkiProduct))
